@@ -5,8 +5,8 @@
        <div class="card">
           <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
           <% cocktail.doses.each do |dose|%>
-        <%= dose.description %>
-        <%= dose.ingredient.name %>
+          <%= dose.description %>
+          <%= dose.ingredient.name %>
         <% end %>
        </div>
     <% end %>

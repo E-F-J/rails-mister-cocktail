@@ -24,6 +24,8 @@
   <%= image_tag "brooke-lark-HjWzkqW1dgI-unsplash.jpg", :size => "100%x100%", class: "img-responsive center-block" %>
 <% end %>
 
+
+<%= cl_image_tag(cocktail.photo.key, height: 200, crop: :fill, class: 'card-img-top') %>
 <!-- <div class="container">
   <div class="row justify-content-center">
     <div class="card">
