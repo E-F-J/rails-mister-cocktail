@@ -4,6 +4,9 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.association :ingredient %>
-  <%= f.button :submit %>
+  <%= f.submit "Add Ingredient(s)", class: 'btn btn-primary' %>
 <% end %>
+
+  <% @cocktail.ingredients.each do |ingredient| %>
+    <p>Ingredient: <%= ingredient.name %></p>
+  <% end %>

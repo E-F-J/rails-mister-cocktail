@@ -1,0 +1,25 @@
+  <% @cocktail.doses.each do |ingredient| %>
+    <p>ingredient</p>
+    <%= link_to "Delete Ingredient", dose_path(ingredient), method: :delete  %>
+  <% end %>
+
+<%= link_to "Add Another Ingredient", new_cocktail_dose_path, class: 'btn btn-primary' %>
+
+
+<div class="drinks-list">
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li><%= cocktail.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+<p><%= link_to "Add Cocktail", new_cocktail_path %></p>
+
+
+
+<%= link_to product_path (product) do %>
+  <%= image_tag "brooke-lark-HjWzkqW1dgI-unsplash.jpg", :size => "100%x100%", class: "img-responsive center-block" %>
+<% end %>
