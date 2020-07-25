@@ -5,11 +5,11 @@
 }
 
 .card {
-margin-top: 20px;
-margin-left: 10px;
-margin-right: 10px;
-height: 250px;
-background-image: asset-url('kim-daniels-p6XuDW03YjE-unsplash.jpg');
-// background-image: url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>');
-padding: 16px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 250px;
+  // background-image: asset-url('kim-daniels-p6XuDW03YjE-unsplash.jpg');
+  // background-image: url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>');
+  padding: 16px;
 }
