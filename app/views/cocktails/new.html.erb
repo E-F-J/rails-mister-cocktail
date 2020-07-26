@@ -2,8 +2,10 @@
 
 <%= render "components/banner-secondary" %>
 
+<div class="container">
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, placeholder: 'Cocktail' %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.submit :submit %>
 <% end %>
+</div>

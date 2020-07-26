@@ -2,12 +2,15 @@
 
 <%= render "components/banner-secondary" %>
 
-<div class="my-container">
-    <div class="card">
+<div class="container">
+      <% if @cocktail.photo.attached? %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 800, crop: :fill %>')">
+      <% else %>
+        <div class="card">
+      <% end %>
       <div class= "name"><%= @cocktail.name %></div>
       <% @cocktail.doses.each do |dose|%>
         <%= dose.description %>
         <%= dose.ingredient.name %>
       <% end %>
-    </div>
 </div>

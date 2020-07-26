@@ -1,11 +1,15 @@
-<h1>Doses#new</h1>
+<%= render "components/banner-secondary" %>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description, placeholder:'Dose in ml' %>
-  <%= f.association :ingredient, placeholder: 'Ingredient' %>
-  <%= f.submit "Add Ingredient(s)", class: 'btn btn-primary' %>
-<% end %>
-
-  <% @cocktail.ingredients.each do |ingredient| %>
-    <p>Ingredient: <%= ingredient.name %></p>
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, placeholder:'Dose in ml' %>
+    <%= f.association :ingredient%>
+    <%= f.submit "Add Ingredient(s)", class: 'btn btn-primary' %>
   <% end %>
+
+    <% @cocktail.ingredients.each do |ingredient| %>
+      <p>Ingredient: <%= ingredient.name %></p>
+    <% end %>
+
+  <h5><%= link_to @cocktail.name, cocktail_path(@cocktail) %></h5>
+</div>
