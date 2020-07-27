@@ -12,4 +12,18 @@
   // background-image: asset-url('kim-daniels-p6XuDW03YjE-unsplash.jpg');
   // background-image: url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>');
   padding: 16px;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.card-title {
+    a {
+    color: rgb(30, 30, 30);
+    font-size: 26px;
+  }
+
+    h5 {
+      vertical-align: bottom;
+    }
 }
